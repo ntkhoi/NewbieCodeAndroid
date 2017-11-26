@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cover_height">150dp</dimen>
+    <dimen name="space_small">8dp</dimen>
+    <dimen name="large_size">20sp</dimen>
+    <dimen name="normal_size">16sp</dimen>
+    <dimen name="normal_sapce">16dp</dimen>
+    <dimen name="poster_width">0dp</dimen>
+</resources>
