@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import movie.dustin.com.movie.R;
 import movie.dustin.com.movie.Utils.RetrofitUtils;
 import movie.dustin.com.movie.adapter.MovieAdapter;
@@ -18,18 +20,21 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ListView lvMovie;
     private MovieApi mMovieApi;
-    private ProgressBar mPbLoading;
+
+    @BindView(R.id.lvMovie)
+    ListView lvMovie;
+
+    @BindView(R.id.pbLoading)
+    ProgressBar mPbLoading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
         mMovieApi = RetrofitUtils.get().create(MovieApi.class);
-        lvMovie = (ListView) findViewById(R.id.lvMovie);
-        mPbLoading = findViewById(R.id.pbLoading);
         fetchMovies();
     }
 

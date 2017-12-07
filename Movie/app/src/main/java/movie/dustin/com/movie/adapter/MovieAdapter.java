@@ -17,6 +17,7 @@ import com.bumptech.glide.request.RequestOptions;
 
 import java.util.List;
 
+import butterknife.ButterKnife;
 import movie.dustin.com.movie.R;
 import movie.dustin.com.movie.model.Movie;
 
@@ -88,5 +89,7 @@ public class MovieAdapter extends ArrayAdapter<Movie> {
         public TextView tvTitle;
         public TextView tvOverview;
         public ImageView ivCover;
+
+
     }
 }
